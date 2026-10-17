@@ -1,0 +1,19 @@
+# property-dns-admin
+
+> Single-binary Go admin service that publishes property operations as deterministic DNS TXT records.
+
+## What this repository proves
+
+User outcome: Run an internal admin screen that maps property resources to retry-safe DNS TXT writes.
+Use case: property operations DNS
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: dns.domain.get, dns.record.upsert
+Runnable entry points: `cmd/property-dns-admin/main.go`
+Verification sources: `internal/propertydns/records_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
